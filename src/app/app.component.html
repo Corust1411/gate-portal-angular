@@ -3,10 +3,12 @@
   <h3>กรุณากรอกข้อมูลบัตรเครดิต</h3>
   <div class="smalltab">
     <p>Card No</p>
-    <input type="text" name="cardno" placeholder="กรอกข้อมูลบัตร">
+    <input type="text" name="cardno" placeholder="กรอกข้อมูลบัตร"
+    [(ngModel)]="cardNo" (ngModelChange)="Search()">
     <button type="submit" value="Search">
       <i class="material-icons">search</i>
     </button>
+    <p>{{card.cardno}}</p>
   </div>
 </div>
 
@@ -14,10 +16,17 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Cardno</th>
+      <th>CardNumber</th>
       <th>FirstName</th>
       <th>LastName</th>
-      <th>DeniedListToPay</th>
+      <th>DeniedList</th>
+    </tr>
+    <tr>
+      <td>{{card.id}}</td>
+      <td>{{card.cardNo}}</td>
+      <td>{{card.firstName}}</td>
+      <td>{{card.lastName}}</td>
+      <td>{{card.deniedList}}</td>
     </tr>
   </thead>
 </table>

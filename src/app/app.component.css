@@ -44,14 +44,12 @@ p{
     display: flex;
     border-spacing: 15px;
     flex-direction: column;
-    justify-content: space-around;
     background-color: rgb(201, 201, 201);
-    border-width: 2px;
     border-radius: 4px;
     margin: 40px 10px 0px 10px;
 }
 .table th{
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
