@@ -9,7 +9,7 @@ import { EmployeeModel } from './model/EmployeeModel';
 })
 export class AppComponent implements OnInit{
   employee : any;
-  card : any;
+  card : CardModel[] = []
   cardNo : any;
   constructor(){
    //this.employee = new EmployeeModel();
@@ -17,13 +17,25 @@ export class AppComponent implements OnInit{
    }
 
   ngOnInit():void {
-    this.card = new CardModel;
+    this.card = [{
+      "id" : 1,
+      "cardNo":"021",
+      "firstName":"Kunha",
+      "lastName":"DB",
+      "deniedList":123123
+    },{
+      "id":2,
+      "cardNo":"641",
+      "firstName":"Kunha",
+      "lastName":"Python",
+      "deniedList":14113
+    }];
 
-    this.card.id = 1;
+    /*this.card.id = 1;
     this.card.cardNo = "021";
     this.card.firstName = "Kunha";
     this.card.lastName = "DB";
-    this.card.deniedList = 1111;
+    this.card.deniedList = 1111;*/
   }
 
  Search(){

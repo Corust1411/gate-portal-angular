@@ -3,29 +3,42 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 5%;
 }
 h3{
-    font-family: 'Taviraj', serif;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-family: 'Lexend', sans-serif;
+    margin-top: 5%;
+    margin-bottom: 2%;
     font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
 }
 p{
+    font-family: 'Lexend', sans-serif;
     margin : 10px;
+    font-size: 20px;
+    font-weight: Bold;
+    letter-spacing: 1px;
 }
+
+
 .smalltab{
     display: flex;
     flex-direction: row;
     font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
     letter-spacing: 0.5px;
+}
+.smalltab input{
+    font-family: 'Lexend', sans-serif;
 }
 .input input{
     margin:0px 5px 0px 5px;
-
 }
-.smalltab button{
+.material-icons{
+    font-size: 28px;
+    padding: 4px;
+}
+/*.smalltab button{
     display: flex;
     border-radius: 10%;
     border: 2px;
@@ -52,4 +65,4 @@ p{
   font-size: 16px;
   font-weight: bold;
 }
-
+*/

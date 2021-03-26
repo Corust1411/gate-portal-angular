@@ -1,17 +1,22 @@
-
+<app-header></app-header>
 <div class="searchtab">
-  <h3>กรุณากรอกข้อมูลบัตรเครดิต</h3>
+  <h3>Check Card DeniedList</h3>
   <div class="smalltab">
-    <p>Card No</p>
-    <input type="text" name="cardno" placeholder="กรอกข้อมูลบัตร"
-    [(ngModel)]="cardNo" (ngModelChange)="Search()">
-    <button type="submit" value="Search">
+    <p>
+      Card Information
+      <span class="material-icons">manage_search</span>
+    </p>
+    <input type="text" name="cardno" placeholder="Enter card's number"
+           [(ngModel)]="cardNo" (ngModelChange)="Search()">
+    <!--<button type="submit" value="Search">
       <i class="material-icons">search</i>
-    </button>
-    <p>{{card.cardno}}</p>
+    </button>-->
   </div>
 </div>
+<app-data-table></app-data-table>
 
+
+<!--
 <table class="table">
   <thead>
     <tr>
@@ -21,12 +26,13 @@
       <th>LastName</th>
       <th>DeniedList</th>
     </tr>
-    <tr>
-      <td>{{card.id}}</td>
-      <td>{{card.cardNo}}</td>
-      <td>{{card.firstName}}</td>
-      <td>{{card.lastName}}</td>
-      <td>{{card.deniedList}}</td>
+    <tr *ngFor='let c of card'>
+      <td>{{c.id}}</td>
+      <td>{{c.cardNo}}</td>
+      <td>{{c.firstName}}</td>
+      <td>{{c.lastName}}</td>
+      <td>{{c.deniedList}}</td>
     </tr>
   </thead>
 </table>
+-->
