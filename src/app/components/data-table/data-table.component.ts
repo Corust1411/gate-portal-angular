@@ -38,6 +38,9 @@ export class DataTableComponent implements AfterViewInit {
   }
 
   Search(){
-    this.dataSource.filter = this.cardNo.trim().toLowerCase();
+    this.dataSource.data = this.dataSource.data.filter((res:any) => {
+      return res.cardNo.toLocaleLowerCase().match(this.cardNo.toLocaleLowerCase());
+    });
+    this.dataSource.data = this.cardNo.trim().toLowerCase();
   }
 }
