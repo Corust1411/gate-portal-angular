@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 5%;
+    padding-top: 7%;
 }
 h3{
     font-family: 'Lexend', sans-serif;
@@ -19,8 +19,8 @@ p{
     font-size: 20px;
     font-weight: Bold;
     letter-spacing: 1px;
+    margin-bottom: 4px;
 }
-
 
 .smalltab{
     display: flex;
@@ -30,15 +30,26 @@ p{
 }
 .smalltab input{
     font-family: 'Lexend', sans-serif;
+    border: none;
+    border-bottom: 2px solid black;
+    padding-top: 20px;
+    position: relative;
+    bottom: 3px;
+    outline: none;
 }
-.input input{
-    margin:0px 5px 0px 5px;
+.smalltab input::after{
+
 }
+
 .material-icons{
     font-size: 28px;
     padding: 4px;
+    position: relative;
+    top: 5.5px;
 }
-/*.smalltab button{
+
+/*
+.smalltab button{
     display: flex;
     border-radius: 10%;
     border: 2px;
@@ -65,4 +76,5 @@ p{
   font-size: 16px;
   font-weight: bold;
 }
+
 */

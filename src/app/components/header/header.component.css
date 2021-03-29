@@ -6,7 +6,7 @@ body{
     display:flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(31, 124, 128);
+    background-color: rgb(151, 76, 105);
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -21,7 +21,9 @@ body{
 }
 .material-icons{
     font-size : 22px;
-    bottom: 50px;
+    position: relative;
+    top: 3px;
+    left: 5px;
 }
 ul{
     list-style: none;

@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { CardModel } from './model/CardModel';
 import { EmployeeModel } from './model/EmployeeModel';
+import { DataTableItem } from './components/data-table/CardModel';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,8 @@ import { EmployeeModel } from './model/EmployeeModel';
 })
 export class AppComponent implements OnInit{
   employee : any;
-  card : CardModel[] = []
+  card : CardModel[] = [];
+  data : DataTableItem[] = [];
   cardNo : any;
   constructor(){
    //this.employee = new EmployeeModel();
@@ -17,6 +19,7 @@ export class AppComponent implements OnInit{
    }
 
   ngOnInit():void {
+    /*
     this.card = [{
       "id" : 1,
       "cardNo":"021",
@@ -31,7 +34,7 @@ export class AppComponent implements OnInit{
       "deniedList":14113
     }];
 
-    /*this.card.id = 1;
+    this.card.id = 1;
     this.card.cardNo = "021";
     this.card.firstName = "Kunha";
     this.card.lastName = "DB";
@@ -42,7 +45,7 @@ export class AppComponent implements OnInit{
   if(this.cardNo == ""){
     this.ngOnInit();
   }else{
-    this.card = this.card.filter((res:any) => {
+    this.data = this.data.filter((res:any) => {
       return res.cardNo.toLocaleLowerCase().match(this.cardNo.toLocaleLowerCase());
     });
   }

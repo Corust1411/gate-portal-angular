@@ -1,30 +1,47 @@
+<div class="search-class">
+  <mat-form-field class="search-field">
+    <input matInput [(ngModel)]="cardNo" placeholder="Enter card's number" color="black" (keyup)="Search()">
+    <button mat-button matSuffix mat-icon-button aria-label="Clear" *ngIf="cardNo" (click)="onSearchClear()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+
 <div class="mat-elevation-z8">
   <table mat-table class="full-width-table" matSort aria-label="Elements">
     <!-- Id Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>id</th>
-      <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      <td mat-cell *matCellDef="let element">{{element.id}}</td>
     </ng-container>
 
     <ng-container matColumnDef="cardNo">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>cardNo</th>
-      <td mat-cell *matCellDef="let row">{{row.cardNo}}</td>
+      <td mat-cell *matCellDef="let element">{{element.cardNo}}</td>
     </ng-container>
 
     <ng-container matColumnDef="firstName">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>firstName</th>
-      <td mat-cell *matCellDef="let row">{{row.firstName}}</td>
+      <td mat-cell *matCellDef="let element">{{element.firstName}}</td>
     </ng-container>
 
     <ng-container matColumnDef="lastName">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>lastName</th>
-      <td mat-cell *matCellDef="let row">{{row.lastName}}</td>
+      <td mat-cell *matCellDef="let element">{{element.lastName}}</td>
     </ng-container>
 
     <ng-container matColumnDef="deniedList">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>deniedList</th>
-      <td mat-cell *matCellDef="let row">{{row.deniedList}}</td>
+      <td mat-cell *matCellDef="let element">{{element.deniedList}}</td>
     </ng-container>
+
+    <!--<ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <button mat-icon-button>Pay<mat-icon>payments</mat-icon></button>
+      </mat-cell>
+    </ng-container>-->
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
