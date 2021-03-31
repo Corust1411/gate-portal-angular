@@ -69,3 +69,6 @@ mat-paginator{
   background-color: black !important;
   opacity:100%;
 }
+tbody{
+   background-color: black;
+}
