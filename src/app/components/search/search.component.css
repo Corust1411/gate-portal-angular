@@ -1,0 +1,40 @@
+.mat-form-field {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  font-family: 'Lexend',sans-serif;
+}
+button{
+  display:flex;
+  position: relative;
+  left: 64%;
+  bottom:9%;
+  font-family: 'Lexend',sans-serif;
+  font-weight:Bold;
+  font-size:17px;
+  border: 3px solid rgba(255, 0, 0, .7) !important;
+}
+table{
+  background-color: rgb(122,69,89);
+  font-family: 'Lexend', sans-serif;
+  width: 80%;
+  margin-left:10%;
+}
+.mat-paginator{
+  width:80%;
+  margin-left:10%;
+  font-family:'Lexend',sans-serif;
+}
+th{
+  background-color: rgb(90, 45, 63);
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color:black !important;
+}
+::ng-deep.mat-form-field-underline {
+  background-color: black !important;
+}
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: pink;
+}
+

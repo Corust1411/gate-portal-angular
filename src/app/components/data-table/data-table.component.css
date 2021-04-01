@@ -64,10 +64,10 @@ mat-paginator{
 .mat-form-field-label{
   color: black !important;
 }
- ::ng-deep.mat-form-field-underline {
-  /*change color of underline*/
-  background-color: black !important;
-  opacity:100%;
+   ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: black !important;
+    opacity:100%;
 }
 tbody{
    background-color: black;
