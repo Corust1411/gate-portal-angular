@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { SearchComponent } from './components/search/search.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
@@ -19,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     FooterComponent,
     DataTableComponent,
     SearchComponent,
+    DialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,8 +47,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     MatCheckboxModule,
     MatButtonModule,
+    MatDialogModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[DialogComponent]
 })
 export class AppModule { }

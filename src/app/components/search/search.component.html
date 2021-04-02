@@ -2,7 +2,7 @@
   <mat-label>Enter your information</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Enter" #input>
 </mat-form-field>
-<button mat-stroked-button color="warn">Pay</button>
+<button mat-stroked-button (click)="openDialog()" color="warn">Pay</button>
 
 <div class="datatable">
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">

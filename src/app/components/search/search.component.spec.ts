@@ -5,6 +5,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { SelectionModel } from '@angular/cdk/collections';
 
@@ -24,6 +25,7 @@ describe('SearchComponent', () => {
         MatTableModule,
         MatCheckboxModule,
         MatButtonModule,
+        MatDialogModule,
       ]
     })
     .compileComponents();
