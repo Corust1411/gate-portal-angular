@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {MD_DIALOG_DATA} from '@angular/material/dialog';
-
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-dialog',
@@ -8,10 +8,12 @@ import {MD_DIALOG_DATA} from '@angular/material/dialog';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
-
+  selected:any;
   constructor(
-  @Inject(MD_DIALOG_DATA) public data: any
-    ) { }
+  public dialogRef: MatDialogRef<SearchComponent>,
+  @Inject(MAT_DIALOG_DATA) public data: any){
+    this.selected = data;
+  }
 
   ngOnInit(): void {
   }

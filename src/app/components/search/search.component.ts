@@ -50,21 +50,16 @@ export class SearchComponent implements AfterViewInit{
     }
 
     constructor(public dialog: MatDialog) {}
-
       openDialog(): void {
         const dialogRef = this.dialog.open(DialogComponent, {
           width: '50%',
-          height: '30%',
+          height: '45%',
           data: {
-
-
+            selected : this.checkboxLabel
            }
         });
-
-
-
-            dialogRef.afterClosed().subscribe(result => {
-              console.log('The dialog was closed');
+        dialogRef.afterClosed().subscribe(result => {
+          console.log('The dialog was closed');
             });
           }
 

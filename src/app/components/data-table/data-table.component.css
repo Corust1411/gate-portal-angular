@@ -72,3 +72,4 @@ mat-paginator{
 tbody{
    background-color: black;
 }
+@import '@angular/material/prebuilt-themes/indigo-pink.css';

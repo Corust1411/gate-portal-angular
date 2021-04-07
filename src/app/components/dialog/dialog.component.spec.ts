@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatButtonModule } from '@angular/material/button';
-import {MD_DIALOG_DATA} from '@angular/material/dialog';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { DialogComponent } from './dialog.component';
 
@@ -13,7 +13,7 @@ describe('DialogComponent', () => {
       declarations: [ DialogComponent ],
       imports:[
        MatButtonModule,
-       MD_DIALOG_DATA,
+       MAT_DIALOG_DATA,
        ]
     })
     .compileComponents();
