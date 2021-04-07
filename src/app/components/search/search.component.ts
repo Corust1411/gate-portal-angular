@@ -55,7 +55,7 @@ export class SearchComponent implements AfterViewInit{
           width: '50%',
           height: '45%',
           data: {
-            selected : this.checkboxLabel
+            selected : this.selection
            }
         });
         dialogRef.afterClosed().subscribe(result => {
