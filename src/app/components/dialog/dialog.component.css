@@ -1,8 +1,12 @@
-p{
+.dialog h2{
   font-family: 'Lexend',sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+.dialog h3{
+  font-family: 'Lexend',sans-serif;
+  font-size: 16px;
 }
 
 

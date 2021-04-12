@@ -13,9 +13,10 @@ import { DialogComponent } from '../dialog/dialog.component';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements AfterViewInit{
-  displayedColumns = ['id','cardNo','firstName','lastName','deniedList','select']
+  displayedColumns = ['id','cardNo','firstName','lastName','deniedList','pay']
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
+  selectedRow:any;
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -28,6 +29,7 @@ export class SearchComponent implements AfterViewInit{
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
   /** Whether the number of selected elements matches the total number of rows. */
+
     isAllSelected() {
       const numSelected = this.selection.selected.length;
       const numRows = this.dataSource.data.length;
@@ -35,27 +37,35 @@ export class SearchComponent implements AfterViewInit{
     }
 
     /** Selects all rows if they are not all selected; otherwise clear selection. */
+    /*
     masterToggle() {
       this.isAllSelected() ?
           this.selection.clear() :
           this.dataSource.data.forEach(row => this.selection.select(row));
-    }
+    }*/
 
-    /** The label for the checkbox on the passed row */
+    /** The label for the checkbox on the passed row *//*
     checkboxLabel(row?: PeriodicElement): string {
       if (!row) {
         return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
       }
       return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
     }
+*/
+    onRowClicked(row:string){
+      this.selectedRow = row;
+    }
 
     constructor(public dialog: MatDialog) {}
-      openDialog(): void {
+      openDialog() {
         const dialogRef = this.dialog.open(DialogComponent, {
           width: '50%',
           height: '45%',
           data: {
-            selected : this.selection
+            cardNo : this.selectedRow.cardNo,
+            firstName : this.selectedRow.firstName,
+            lastName : this.selectedRow.lastName,
+            deniedList : this.selectedRow.deniedList
            }
         });
         dialogRef.afterClosed().subscribe(result => {

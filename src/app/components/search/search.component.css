@@ -5,17 +5,18 @@
   font-family: 'Lexend',sans-serif;
 
 }
-
+td.mat-cell{
+  padding: 10px 0 10px 0;
+}
 
 button{
   display:flex;
-  position: relative;
-  left: 64%;
-  bottom:9%;
+  justify-content: center;
+  align-items: center;
   font-family: 'Lexend',sans-serif;
-  font-weight:Bold;
-  font-size:17px;
-  border: 3px solid rgba(255, 0, 0, .7) !important;
+  font-size: 13px;
+  border: 2px solid whitesmoke;
+  letter-spacing: 1px;
 }
 table{
   background-color: rgb(122,69,89);

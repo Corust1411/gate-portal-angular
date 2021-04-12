@@ -8,14 +8,14 @@ import { SearchComponent } from '../search/search.component';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
-  selected:any;
+  receivedRow;
   constructor(
-  public dialogRef: MatDialogRef<SearchComponent>,
-  @Inject(MAT_DIALOG_DATA) public data: any){
-    this.selected = data;
-  }
+    public dialogRef: MatDialogRef<SearchComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any){
+      this.receivedRow = data;
+    }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
