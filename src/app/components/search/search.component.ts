@@ -16,7 +16,7 @@ export class SearchComponent implements AfterViewInit{
   displayedColumns = ['id','cardNo','firstName','lastName','deniedList','pay']
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
-  selectedRow:any;
+  selectedRow:any = -1;
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -36,23 +36,23 @@ export class SearchComponent implements AfterViewInit{
       return numSelected === numRows;
     }
 
-    /** Selects all rows if they are not all selected; otherwise clear selection. */
-    /*
+    /* Selects all rows if they are not all selected; otherwise clear selection. */
+
     masterToggle() {
       this.isAllSelected() ?
           this.selection.clear() :
           this.dataSource.data.forEach(row => this.selection.select(row));
-    }*/
+    }
 
-    /** The label for the checkbox on the passed row *//*
+    /* The label for the checkbox on the passed row */
     checkboxLabel(row?: PeriodicElement): string {
       if (!row) {
         return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
       }
       return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
     }
-*/
-    onRowClicked(row:string){
+
+    onRowClicked(row:any){
       this.selectedRow = row;
     }
 
@@ -60,7 +60,7 @@ export class SearchComponent implements AfterViewInit{
       openDialog() {
         const dialogRef = this.dialog.open(DialogComponent, {
           width: '50%',
-          height: '45%',
+          height: '55%',
           data: {
             cardNo : this.selectedRow.cardNo,
             firstName : this.selectedRow.firstName,

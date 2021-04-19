@@ -43,4 +43,6 @@ th{
 ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
   background-color: pink;
 }
-
+.highlight{
+    background-color: rgb(151, 76, 105);
+}
