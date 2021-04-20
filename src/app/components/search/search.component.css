@@ -44,5 +44,6 @@ th{
   background-color: pink;
 }
 .highlight{
-    background-color: rgb(151, 76, 105);
+  background-color: rgb(151, 76, 105);
+  transition: 0.6s;
 }
