@@ -3,9 +3,10 @@
   <input matInput style="width:400px !important" (keyup)="applyFilter($event)" placeholder="Enter" #input>
 </mat-form-field>
 <!--<button mat-stroked-button (click)="openDialog()" color="warn">Pay</button>-->
-
+<!--
 <div class="datatable">
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  -->
   <!--<ng-container matColumnDef="select">
     <th mat-header-cell *matHeaderCellDef>
       <mat-checkbox (change)="$event ? masterToggle() : null"
@@ -23,6 +24,7 @@
       </mat-checkbox>
     </td>
   </ng-container> -->
+  <!--
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
     <td mat-cell *matCellDef="let row"> {{row.id}} </td>
@@ -62,4 +64,24 @@
 </table>
   <mat-paginator [length]="dataSource?.data?.length" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[1,5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>
-
+-->
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>CardNo</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>DeniedList</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of UserList">
+        <td>{{dataItem.Id}}</td>
+        <td>{{dataItem.cardNo}}</td>
+        <td>{{dataItem.firstName}}</td>
+        <td>{{dataItem.lastName}}</td>
+        <td>{{dataItem.deniedList}}</td>
+    </tr>
+  </tbody>
+</table>
