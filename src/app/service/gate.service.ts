@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GateService {
-readonly APIUrl="http://localhost:53535/api";
+readonly APIUrl="http://localhost:50000/api";
 
   constructor(private http:HttpClient) {
 

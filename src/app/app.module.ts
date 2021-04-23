@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { SearchComponent } from './components/search/search.component';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { TableComponent } from './components/table/table.component';
 import { GateService } from './service/gate.service';
 
 import { FormsModule } from '@angular/forms';
@@ -23,6 +24,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     DataTableComponent,
     SearchComponent,
     DialogComponent,
+    TableComponent,
 
   ],
   imports: [
@@ -50,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatDialogModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [GateService],
   bootstrap: [AppComponent],

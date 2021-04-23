@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>CardNo</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>DeniedList</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let dataItem of UserList">
+    <td>{{dataItem.Id}}</td>
+    <td>{{dataItem.cardNo}}</td>
+    <td>{{dataItem.firstName}}</td>
+    <td>{{dataItem.lastName}}</td>
+    <td>{{dataItem.deniedList}}</td>
+  </tr>
+  </tbody>
+</table>

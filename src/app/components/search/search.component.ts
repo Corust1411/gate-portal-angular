@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild,Inject,OnInit} from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
@@ -7,13 +7,12 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import {SelectionModel} from '@angular/cdk/collections';
 
 import { DialogComponent } from '../dialog/dialog.component';
-import { GateService } from '../../service/gate.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements AfterViewInit,OnInit{
+export class SearchComponent implements AfterViewInit{
   displayedColumns = ['id','cardNo','firstName','lastName','deniedList','pay']
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);
@@ -57,20 +56,9 @@ export class SearchComponent implements AfterViewInit,OnInit{
       this.selectedRow = row;
     }
 
-    constructor(public dialog: MatDialog,private  service:GateService) {}
+    constructor(public dialog: MatDialog) {}
 
-    UserList:any=[];
 
-    ngOnInit():void{
-      this.refreshList();
-    }
-    refreshList(){
-      this.service.getList().subscribe(
-        data=>{
-          this.UserList=data;
-        }
-      );
-    }
 
     openDialog() {
         const dialogRef = this.dialog.open(DialogComponent, {
